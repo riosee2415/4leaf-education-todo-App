@@ -4,8 +4,14 @@ function startRandom() {
   const randomValue = Math.random() * 3 + 1;
   const exeValue = Math.floor(randomValue);
 
-  const backgroundFileName = exeValue + ".png";
+  const backgroundFileName = exeValue + ".jpg";
   console.log(backgroundFileName);
+
+  const bodyTag = document.getElementById("myBody");
+  console.dir(bodyTag);
+
+  bodyTag.style.backgroundImage = "url('" + backgroundFileName + "')";
+  bodyTag.style.backgroundSize = "cover";
 }
 
 function init() {
